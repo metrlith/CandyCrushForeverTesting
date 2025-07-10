@@ -131,3 +131,37 @@ main {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+#editPanel {
+  background: linear-gradient(270deg,
+    #ff5ec3,
+    #ff9e55,
+    #ffee55,
+    #64ff64,
+    #55e1ff,
+    #9980ff,
+    #ff55aa
+  );
+  background-size: 1400% 1400%;
+  animation: rainbowShift 12s ease infinite;
+  color: white;
+  width: 300px;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+/* Make headings and text more readable */
+#editPanel h1,
+#editPanel summary {
+  color: white;
+}
+
+/* Optional: make dropdowns match */
+#editPanel details {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
