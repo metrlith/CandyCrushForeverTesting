@@ -1,3 +1,6 @@
+/* -------------------------------
+   🎨 Base Reset & Global Styles
+---------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -13,13 +16,17 @@ body {
   flex-direction: column;
 }
 
-/* Layout */
+/* -------------------------------
+   🧱 Layout
+---------------------------------*/
 main {
   display: flex;
   height: 100%;
 }
 
-/* Sidebar toggle (hamburger) */
+/* -------------------------------
+   🍔 Sidebar Toggle (Hamburger)
+---------------------------------*/
 #menuToggle {
   position: fixed;
   top: 15px;
@@ -40,56 +47,73 @@ main {
   display: none;
 }
 
-/* Sidebar */
+/* -------------------------------
+   🌈 Sidebar
+---------------------------------*/
 #sidebar {
   position: fixed;
   top: 0;
   left: 0;
   width: 200px;
   height: 100%;
-  background-color: #111;
-  color: black;
   padding: 20px;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
+  background: linear-gradient(270deg,
+    #ff5ec3,
+    #ff9e55,
+    #ffee55,
+    #64ff64,
+    #55e1ff,
+    #9980ff,
+    #ff55aa
+  );
+  background-size: 1400% 1400%;
+  animation: rainbowShift 12s ease infinite;
 }
 
 #sidebar.open {
   transform: translateX(0);
 }
 
-#sidebar a {
+/* Sidebar buttons & links */
+.sidebar-btn {
+  width: 100%;
+  height: 72px;
   background: none;
   border: none;
-  font-size: 16px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  padding: 0;
   cursor: pointer;
-  text-decoration: none;
-}
-
-#sidebar img {
-  width: 48px;
-  height: 48px;
-  display: block;
-  margin: 0 auto;
   transition: transform 0.2s ease;
 }
 
-#sidebar img:hover {
-  transform: scale(1.1);
+.sidebar-btn:hover {
+  transform: scale(1.05);
 }
 
-/* Board area */
+.sidebar-btn img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* -------------------------------
+   🎯 Board Area
+---------------------------------*/
 #boardArea {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 60px; /* offset for menu button */
+  margin-left: 60px; /* for toggle button space */
 }
 
 #board {
@@ -99,75 +123,36 @@ main {
   border: 3px solid red;
 }
 
-/* Editor panel */
+/* -------------------------------
+   🧰 Editor Panel
+---------------------------------*/
 #editPanel {
-  width: 300px;
-  background-color: #000;
-  color: white;
-  padding: 20px;
-  overflow-y: auto;
-}
-
-#editPanel h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-#editPanel details {
-  margin-bottom: 10px;
-  background: #222;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-/* 🌈 Rainbow sidebar */
-#sidebar {
-  background: linear-gradient(270deg,
-    #ff5ec3,
-    #ff9e55,
-    #ffee55,
-    #64ff64,
-    #55e1ff,
-    #9980ff,
-    #ff55aa
-  );
-  background-size: 1400% 1400%;
-  animation: rainbowShift 12s ease infinite;
-}
-
-/* animation keyframes */
-@keyframes rainbowShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-#editPanel {
-  background: linear-gradient(270deg,
-    #ff5ec3,
-    #ff9e55,
-    #ffee55,
-    #64ff64,
-    #55e1ff,
-    #9980ff,
-    #ff55aa
-  );
-  background-size: 1400% 1400%;
-  animation: rainbowShift 12s ease infinite;
-  color: white;
   width: 300px;
   padding: 20px;
   overflow-y: auto;
   z-index: 1;
+  color: white;
+
+  background: linear-gradient(270deg,
+    #ff5ec3,
+    #ff9e55,
+    #ffee55,
+    #64ff64,
+    #55e1ff,
+    #9980ff,
+    #ff55aa
+  );
+  background-size: 1400% 1400%;
+  animation: rainbowShift 12s ease infinite;
 }
 
-/* Make headings and text more readable */
 #editPanel h1,
 #editPanel summary {
   color: black;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Optional: make dropdowns match */
 #editPanel details {
   background-color: rgba(0, 0, 0, 0.4);
   color: black;
@@ -176,27 +161,11 @@ main {
   margin-bottom: 8px;
 }
 
-.sidebar-icon-button {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 8px 0;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-}
-
-.sidebar-icon-button img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
-  transition: transform 0.2s ease;
-}
-
-.sidebar-icon-button:hover img {
-  transform: scale(1.1);
+/* -------------------------------
+   🌈 Animation
+---------------------------------*/
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
