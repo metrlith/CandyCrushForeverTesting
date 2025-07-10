@@ -4,8 +4,8 @@ const board = document.getElementById("board");
 const editPanel = document.getElementById("editPanel");
 
 menuToggle.addEventListener("click", () => {
-  sidebar.classList.add("open");
-  menuToggle.classList.add("hide");
+  const isOpen = sidebar.classList.toggle("open");
+  menuToggle.classList.toggle("hide", isOpen);
 });
 
 document.addEventListener("click", (event) => {
@@ -15,6 +15,13 @@ document.addEventListener("click", (event) => {
   const isClickOnPanel = editPanel.contains(event.target);
 
   if (!isClickInsideSidebar && !isClickOnToggle && !isClickOnBoard && !isClickOnPanel) {
+    sidebar.classList.remove("open");
+    menuToggle.classList.remove("hide");
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
     sidebar.classList.remove("open");
     menuToggle.classList.remove("hide");
   }
