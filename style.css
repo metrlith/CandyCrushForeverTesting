@@ -109,3 +109,25 @@ main {
   padding: 10px;
   border-radius: 4px;
 }
+
+/* 🌈 Rainbow sidebar */
+#sidebar {
+  background: linear-gradient(270deg,
+    #ff5ec3,
+    #ff9e55,
+    #ffee55,
+    #64ff64,
+    #55e1ff,
+    #9980ff,
+    #ff55aa
+  );
+  background-size: 1400% 1400%;
+  animation: rainbowShift 12s ease infinite;
+}
+
+/* animation keyframes */
+@keyframes rainbowShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
