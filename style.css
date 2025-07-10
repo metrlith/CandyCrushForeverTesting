@@ -36,6 +36,10 @@ main {
   border-radius: 2px;
 }
 
+#menuToggle.hide {
+  display: none;
+}
+
 /* Sidebar */
 #sidebar {
   position: fixed;

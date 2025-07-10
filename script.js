@@ -1,6 +1,7 @@
-const menuToggle = document.getElementById("menuToggle");
-const sidebar = document.getElementById("sidebar");
+document.getElementById("menuToggle").addEventListener("click", () => {
+  const sidebar = document.getElementById("sidebar");
+  const toggle = document.getElementById("menuToggle");
 
-menuToggle.addEventListener("click", () => {
   sidebar.classList.toggle("open");
+  toggle.classList.toggle("hide");
 });
