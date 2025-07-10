@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candy Crush Forever Editor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+</head>
+<body>
+  <!-- Sidebar toggle button -->
+  <div id="menuToggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <!-- Sidebar -->
+  <nav id="sidebar">
+    <button id="playBtn">▶ Play</button>
+    <button id="exportBtn">⬆ Export</button>
+    <button id="importBtn">⬇ Import</button>
+    <a href="https://github.com/metrlith/CandyCrushForever" target="_blank">🐱 GitHub</a>
+    <a href="https://discord.gg/" target="_blank">💬 Discord</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <section id="boardArea">
+      <!-- This will hold the board (grid) -->
+      <div id="board"></div>
+    </section>
+
+    <aside id="editPanel">
+      <h1>Edit Level</h1>
+      <details open><summary>Colors</summary></details>
+      <details><summary>Candy</summary></details>
+      <details><summary>Frog</summary></details>
+      <details><summary>Tiles</summary></details>
+      <details><summary>Blockers</summary></details>
+      <details><summary>Fizz</summary></details>
+      <details><summary>Notes</summary></details>
+      <details><summary>Locks</summary></details>
+      <details><summary>Candy Cannon</summary></details>
+      <details><summary>Ingredients</summary></details>
+      <details><summary>Mixers</summary></details>
+      <details><summary>Portals</summary></details>
+      <details><summary>Level Type</summary></details>
+      <details><summary>Moves</summary></details>
+      <details><summary>Preferred Colors</summary></details>
+      <details><summary>Score Targets</summary></details>
+      <details><summary>Additional Settings</summary></details>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
